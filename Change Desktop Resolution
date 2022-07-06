@@ -1,0 +1,17 @@
+easiest way to change resolution: 
+
+1)
+xrandr | grep connected
+--> get the monitor_name -->
+xrandr --output Monitor_name --mode 1920×1080
+
+2)
+Install arandr and run the application in order to configure easily multiple screen setups
+  fedora -> sudo dnf install arandr
+  Arch -> sudo pacman -S arandr
+  Debian -> sudo apt install arandr
+  
+3)
+Change grub resolution:
+nvim /etc/default/grub -> .."loglevel=3 quiet video=1920x1080" and maybe change the GRUB_GFXMODE -> to the wanted resolution
+grub-mkconfig -o /boot/grub/grub.cfg
