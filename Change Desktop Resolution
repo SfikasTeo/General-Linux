@@ -15,4 +15,4 @@ Install arandr and run the application in order to configure easily multiple scr
 Change grub resolution:
   nvim /etc/default/grub -> (GRUB_CMDLINE_LINUX).."loglevel=3 quiet video=1920x1080"
   and maybe change the GRUB_GFXMODE -> to the wanted resolution
-  grub-mkconfig -o /boot/(grub or grub2)/grub.cfg
+  grub(2)-mkconfig -o /boot/grub(grub2)/grub.cfg
