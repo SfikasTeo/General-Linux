@@ -60,13 +60,13 @@ bspc config merge_overlapping_monitors true
 bspc rule -a Brave-browser desktop='^1' follow=on
 bspc rule -a variety state=floating
 bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
 bspc rule -a Screenkey manage=off
 bspc rule -a Discord desktop='^6'
 
 #Auto-Start
 picom --config "$HOME/.config/bspwm/picom.conf" &
 nitrogen --set-auto "$HOME/.config/bg.jpg" &
+#synology-drive &
 
 # Move to Desktop 1
 bspc desktop -f 1
