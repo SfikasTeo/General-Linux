@@ -1,5 +1,8 @@
 #! /bin/sh
 
+#Clean lingering programs when reloaded
+"$HOME/.config/bspwm/clean" &
+
 #Start polybar first
 bash ~/.config/polybar/launch.sh &
 feh --bg-fill ~/Pictures/background.jpg &
