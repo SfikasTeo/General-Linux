@@ -1,0 +1,34 @@
+1) Install FiraCode Nerd Font 
+    Installed fonts can be found at:
+      /lib/kdb/consolefonts -> RedHat
+      /lib/share/consolefonts -> Debian
+      ~/.local/share/fonts -> Arch ,Debian etc
+      
+2) fc-query -f '%{family[0]}\n' /path/to/file -> Get the Font family
+    For fira code family -> FiraCode NF
+
+3) Change Terminal Fonts
+    There Are many ways for changing terminal fonts:
+    Systemd -> edit /etc/vconsole.conf
+    alacritty -> edit ~/.config/alacritty.yml
+    
+    For Debian distributions there is also:
+        /etc/default/console-setup
+
+4) Install starship
+    Arch: sudo pacman -S starship
+    RedHat: sudo dnf install starship
+    Debian or manual: curl -O https://starship.rs/install.sh
+                      chmod +x install.sh
+                      ./install.sh -b ~/.local/bin or ./install.sh /bin -> system wide installation
+
+5) Intergrade starship to the shell by changing ~/.rc
+    bashrc -> eval "$(starship init bash)"
+    zsh -> eval "$(starship init zsh)"
+    fish -> starship init fish | source (at the end of ~/.config/fish)
+
+6) Change or create the starship configuration: 
+    ~/.config/starship.toml -> edit the configuration
+
+7) Change Shell -> chsh -s /bin/shell
+    
